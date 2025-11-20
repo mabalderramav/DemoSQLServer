@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[DimShipper](
+    [ShipperSK] [int] IDENTITY(1,1) NOT NULL,
+    [ShipperID] [int] NOT NULL,
+    [CompanyName] [nvarchar](40) NOT NULL,
+    PRIMARY KEY CLUSTERED
+        (
+            [ShipperSK] ASC
+            )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]

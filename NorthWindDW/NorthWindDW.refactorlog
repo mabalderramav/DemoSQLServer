@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="7a9fdf52-4367-4e24-96d5-ea536d1d9692" ChangeDateTime="11/20/2025 00:37:27">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_customer_key]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_customer_sk]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e7b15a0c-c239-41ca-93ab-1ca6e8f39a6a" ChangeDateTime="11/20/2025 00:41:18">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_date_key0]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_date_sk]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2d3a92b0-7957-4645-a5f9-666c771b05a2" ChangeDateTime="11/20/2025 00:42:04">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_date_key1]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_date_sk1]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75b49ae5-1dbc-4610-b15a-69bd4c7008d2" ChangeDateTime="11/20/2025 00:42:16">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_date_key2]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_date_sk2]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="050960c7-764a-4855-8447-b9cd5466ec5f" ChangeDateTime="11/20/2025 00:42:27">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_employee_key]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_employee_sk]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="229b429d-670b-43bd-95ff-3edcfe75c524" ChangeDateTime="11/20/2025 00:42:37">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_product_key]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_product_sk]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bcd72194-f1c2-4d85-9658-62747b3e2593" ChangeDateTime="11/20/2025 00:42:48">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_shipinfo_key]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_shipinfo_sk]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5b2ba0ed-f29f-4dde-b816-5adfca7bca7c" ChangeDateTime="11/20/2025 00:43:00">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_shipper_key]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_shipper_sk]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d1cda1f3-3648-4c28-8da2-ffdff7b482a6" ChangeDateTime="11/20/2025 00:43:09">
+    <Property Name="ElementName" Value="[dbo].[FK_orders_fact_supplier_key]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[FactOrders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_orders_fact_supplier_sk]" />
+  </Operation>
+</Operations>

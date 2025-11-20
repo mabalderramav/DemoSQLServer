@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[DimProduct](
+    [ProductSK] [int] IDENTITY(1,1) NOT NULL,
+    [ProductID] [int] NOT NULL,
+    [ProductName] [nvarchar](40) NOT NULL,
+    [QuantityPerUnit] [nvarchar](20) NULL,
+    [UnitPrice] [real] NULL,
+    [UnitsInStock] [smallint] NULL,
+    [UnitsOnOrder] [smallint] NULL,
+    [ReorderLevel] [smallint] NULL,
+    [Discontinued] [smallint] NULL,
+    [CategoryName] [nvarchar](15) NOT NULL,
+    PRIMARY KEY CLUSTERED
+        (
+            [ProductSK] ASC
+            )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]

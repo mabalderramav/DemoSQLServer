@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BikeStoresOLTP", "BikeStore
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NorthWindOLTP", "NorthWindOLTP\NorthWindOLTP.sqlproj", "{3EC2C910-E0FF-414C-927A-1A3DE542A31C}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NorthWindDW", "NorthWindDW\NorthWindDW.sqlproj", "{5FE17895-82B0-4C00-B16D-46D02EE990F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,12 @@ Global
 		{3EC2C910-E0FF-414C-927A-1A3DE542A31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EC2C910-E0FF-414C-927A-1A3DE542A31C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EC2C910-E0FF-414C-927A-1A3DE542A31C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5FE17895-82B0-4C00-B16D-46D02EE990F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE17895-82B0-4C00-B16D-46D02EE990F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE17895-82B0-4C00-B16D-46D02EE990F7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5FE17895-82B0-4C00-B16D-46D02EE990F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE17895-82B0-4C00-B16D-46D02EE990F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE17895-82B0-4C00-B16D-46D02EE990F7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

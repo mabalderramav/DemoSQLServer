@@ -10,9 +10,6 @@
 	[OrderDateSK] [int] NOT NULL,
 	[RequiredDateSK] [int] NOT NULL,
 	[ShippedDateSK] [int] NOT NULL,
-	[OrderDate] [date] NOT NULL,
-	[RequiredDate] [date] NOT NULL,
-	[ShippedDate] [date] NOT NULL,
 	[Freight] [real] NOT NULL,
 	[UnitPrice] [real] NOT NULL,
 	[Quantity] [int] NOT NULL,
@@ -20,17 +17,7 @@
 	[ActualCost] [real] NOT NULL,
  CONSTRAINT [PK_Fact_order] PRIMARY KEY CLUSTERED 
 (
-	[OrderSK] ASC,
-	[OrderID] ASC,
-	[EmployeeSK] ASC,
-	[ShipperSK] ASC,
-	[CustomerSK] ASC,
-	[SupplierSK] ASC,
-	[ProductSK] ASC,
-	[ShipInfoSK] ASC,
-	[OrderDateSK] ASC,
-	[RequiredDateSK] ASC,
-	[ShippedDateSK] ASC
+	[OrderSK] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

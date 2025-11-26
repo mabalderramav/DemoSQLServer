@@ -58,6 +58,8 @@
     <Folder Include="Properties" />
     <Folder Include="Schema" />
     <Folder Include="Schema\Tables" />
+    <Folder Include="Schema\Programmability" />
+    <Folder Include="Schema\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\Customers.sql" />
@@ -73,5 +75,6 @@
     <Build Include="Schema\Tables\EmployeeTerritories.sql" />
     <Build Include="Schema\Tables\Orders.sql" />
     <Build Include="Schema\Tables\OrderDetails.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
   </ItemGroup>
 </Project>

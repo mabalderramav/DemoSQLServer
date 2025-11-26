@@ -10,7 +10,7 @@
     [Country] [nvarchar](15) NULL,
     [Phone] [nvarchar](24) NULL,
     [Fax] [nvarchar](24) NULL,
-    [rowversion] [timestamp] NULL,
+    [Rowversion]   [timestamp]    NOT NULL,
     CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED
 (
 [CustomerID] ASC

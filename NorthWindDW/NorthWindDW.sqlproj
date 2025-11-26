@@ -68,6 +68,7 @@
     <Build Include="Tables\dbo\DimShipper.sql" />
     <Build Include="Tables\dbo\DimnSupplier.sql" />
     <Build Include="Tables\dbo\FactOrders.sql" />
+    <Build Include="Tables\dbo\PackageConfig.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="NorthWindDW.refactorlog" />

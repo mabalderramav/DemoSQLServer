@@ -9,7 +9,7 @@
 	[UnitsOnOrder] [smallint] NULL,
 	[ReorderLevel] [smallint] NULL,
 	[Discontinued] [bit] NOT NULL,
-	[rowversion] [timestamp] NULL,
+    [Rowversion]   [timestamp]    NOT NULL,
  CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
 	[ProductID] ASC

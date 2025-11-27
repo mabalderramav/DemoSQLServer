@@ -76,5 +76,11 @@
     <Build Include="Schema\Tables\Orders.sql" />
     <Build Include="Schema\Tables\OrderDetails.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetCustomerChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetProductChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetEmployeeChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetSupplierChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetShipInfoChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetShipperChangesByRowVersion.sql" />
   </ItemGroup>
 </Project>

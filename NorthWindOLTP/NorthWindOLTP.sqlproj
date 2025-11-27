@@ -82,5 +82,6 @@
     <Build Include="Schema\Programmability\Stored Procedures\GetSupplierChangesByRowVersion.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\GetShipInfoChangesByRowVersion.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\GetShipperChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetOrdersChangesByRowVersion.sql" />
   </ItemGroup>
 </Project>

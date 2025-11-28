@@ -60,7 +60,7 @@
     <Folder Include="Schema\Tables" />
     <Folder Include="Schema\Programmability" />
     <Folder Include="Schema\Programmability\Stored Procedures" />
-    <Folder Include="NewFolder1\" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\Customers.sql" />
@@ -84,5 +84,22 @@
     <Build Include="Schema\Programmability\Stored Procedures\GetShipInfoChangesByRowVersion.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\GetShipperChangesByRowVersion.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\GetOrdersChangesByRowVersion.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Region.data.sql" />
+    <None Include="Scripts\Clean.data.sql" />
+    <None Include="Scripts\Territories.data.sql" />
+    <None Include="Scripts\Employees.data.sql" />
+    <None Include="Scripts\EmployeeTerritories.data.sql" />
+    <None Include="Scripts\Categories.data.sql" />
+    <None Include="Scripts\Suppliers.data.sql" />
+    <None Include="Scripts\Products.data.sql" />
+    <None Include="Scripts\Customers.data.sql" />
+    <None Include="Scripts\Shippers.data.sql" />
+    <None Include="Scripts\Orders.data.sql" />
+    <None Include="Scripts\OrderDetails.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

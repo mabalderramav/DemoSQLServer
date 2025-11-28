@@ -56,19 +56,24 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Tables" />
-    <Folder Include="Tables\dbo" />
+    <Folder Include="Schema" />
+    <Folder Include="Schema\Programmability" />
+    <Folder Include="Schema\Tables" />
+    <Folder Include="Schema\Tables\dbo" />
+    <Folder Include="Schema\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\dbo\DimCustomer.sql" />
-    <Build Include="Tables\dbo\DimDate.sql" />
-    <Build Include="Tables\dbo\DimEmployee.sql" />
-    <Build Include="Tables\dbo\DimProduct.sql" />
-    <Build Include="Tables\dbo\DimShipInfo.sql" />
-    <Build Include="Tables\dbo\DimShipper.sql" />
-    <Build Include="Tables\dbo\DimnSupplier.sql" />
-    <Build Include="Tables\dbo\FactOrders.sql" />
-    <Build Include="Tables\dbo\PackageConfig.sql" />
+    <Build Include="Schema\Tables\dbo\DimCustomer.sql" />
+    <Build Include="Schema\Tables\dbo\DimDate.sql" />
+    <Build Include="Schema\Tables\dbo\DimEmployee.sql" />
+    <Build Include="Schema\Tables\dbo\DimnSupplier.sql" />
+    <Build Include="Schema\Tables\dbo\DimProduct.sql" />
+    <Build Include="Schema\Tables\dbo\DimShipInfo.sql" />
+    <Build Include="Schema\Tables\dbo\DimShipper.sql" />
+    <Build Include="Schema\Tables\dbo\FactOrders.sql" />
+    <Build Include="Schema\Tables\dbo\PackageConfig.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="NorthWindDW.refactorlog" />

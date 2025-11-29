@@ -86,7 +86,6 @@
     <Build Include="Schema\Tables\staging\staging.ShipInfo.sql" />
     <Build Include="Schema\Tables\staging\staging.Shipper.sql" />
     <Build Include="Schema\Tables\staging\staging.Orders.sql" />
-    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="NorthWindDW.refactorlog" />

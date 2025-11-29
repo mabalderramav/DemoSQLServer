@@ -1,4 +1,4 @@
-﻿CREATE TABLE [staging].[DimEmployee]
+﻿CREATE TABLE [staging].[Employee]
 (
     [EmployeeSK] [int] NOT NULL,
     [FirstName] [nvarchar](30) NOT NULL,

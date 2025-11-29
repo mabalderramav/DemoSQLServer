@@ -1,4 +1,4 @@
-﻿CREATE TABLE [staging].[DimSupplier]
+﻿CREATE TABLE [staging].[Supplier]
 (
     [SupplierSK] [int] NOT NULL,
     [CompanyName] [nvarchar](40) NOT NULL,

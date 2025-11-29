@@ -1,4 +1,4 @@
-﻿CREATE TABLE [staging].[DimCustomer]
+﻿CREATE TABLE [staging].[Customer]
 (
     [CustomerSK] [int] NOT NULL,
     [CompanyName] [varchar](40) NOT NULL,

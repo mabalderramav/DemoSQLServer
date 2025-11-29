@@ -79,13 +79,14 @@
     <Build Include="Schema\Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
     <Build Include="Schema\Security\schemas\staging.sql" />
-    <Build Include="Schema\Tables\staging\staging.DimCustomer.sql" />
-    <Build Include="Schema\Tables\staging\staging.DimEmployee.sql" />
-    <Build Include="Schema\Tables\staging\staging.DimSupplier.sql" />
-    <Build Include="Schema\Tables\staging\staging.DimProduct.sql" />
-    <Build Include="Schema\Tables\staging\staging.DimShipInfo.sql" />
-    <Build Include="Schema\Tables\staging\staging.DimShipper.sql" />
+    <Build Include="Schema\Tables\staging\staging.Customer.sql" />
+    <Build Include="Schema\Tables\staging\staging.Employee.sql" />
+    <Build Include="Schema\Tables\staging\staging.Supplier.sql" />
+    <Build Include="Schema\Tables\staging\staging.Product.sql" />
+    <Build Include="Schema\Tables\staging\staging.ShipInfo.sql" />
+    <Build Include="Schema\Tables\staging\staging.Shipper.sql" />
     <Build Include="Schema\Tables\staging\staging.Orders.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="NorthWindDW.refactorlog" />

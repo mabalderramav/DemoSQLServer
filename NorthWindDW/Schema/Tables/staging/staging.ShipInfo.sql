@@ -1,4 +1,4 @@
-﻿CREATE TABLE [staging].[DimShipInfo]
+﻿CREATE TABLE [staging].[ShipInfo]
 (
     [ShipinfoSK] [int] NOT NULL,
     [Address] [nvarchar](60) NULL,

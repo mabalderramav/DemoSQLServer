@@ -1,4 +1,4 @@
-﻿CREATE TABLE [staging].[DimShipper]
+﻿CREATE TABLE [staging].[Shipper]
 (
     [ShipperSK] [int] NOT NULL,
     [ShipperID] [int] NOT NULL,

@@ -88,6 +88,8 @@
     <Build Include="Schema\Tables\staging\staging.Orders.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimSupplier.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimProduct.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="NorthWindDW.refactorlog" />

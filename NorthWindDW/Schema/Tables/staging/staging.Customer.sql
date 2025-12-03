@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [staging].[Customer]
 (
     [CustomerSK] [int] NOT NULL,
-    [CompanyName] [varchar](40) NOT NULL,
-    [ContactName] [varchar](30) NULL,
-    [ContactTitle] [varchar](50) NULL,
+    [CompanyName] [nvarchar](40) NOT NULL,
+    [ContactName] [nvarchar](30) NULL,
+    [ContactTitle] [nvarchar](30) NULL,
     [Address] [nvarchar](60) NULL,
     [City] [nvarchar](15) NULL,
     [Region] [nvarchar](15) NULL,

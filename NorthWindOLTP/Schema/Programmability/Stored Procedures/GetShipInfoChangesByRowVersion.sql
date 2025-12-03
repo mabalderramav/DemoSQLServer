@@ -5,7 +5,8 @@
     )
     AS
     BEGIN
-        SELECT ord.[ShipAddress]
+        SELECT ord.[OrderID] 
+             ,ord.[ShipAddress]
              ,ord.[ShipCity]
              ,ord.[ShipRegion]
              ,ord.[ShipCountry]

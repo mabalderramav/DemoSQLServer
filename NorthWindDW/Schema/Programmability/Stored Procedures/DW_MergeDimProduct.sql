@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[DW_MergeDimProduct]
 AS
 BEGIN
-    UPDATE dc
+    UPDATE dp
     SET [ProductName]      = sp.[ProductName],
         [QuantityPerUnit]  = sp.[QuantityPerUnit],
         [UnitPrice]        = sp.[UnitPrice],

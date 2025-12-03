@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [dbo].[DimCustomer](
     [CustomerSK] [int] IDENTITY(1,1) NOT NULL,
-    [CustomerID] [char](10) NOT NULL,
-    [CompanyName] [varchar](40) NOT NULL,
-    [ContactName] [varchar](30) NULL,
-    [ContactTitle] [varchar](50) NULL,
+    [CustomerID] [nchar](5) NOT NULL,
+    [CompanyName] [nvarchar](40) NOT NULL,
+    [ContactName] [nvarchar](30) NULL,
+    [ContactTitle] [nvarchar](30) NULL,
     [Address] [nvarchar](60) NULL,
     [City] [nvarchar](15) NULL,
     [Region] [nvarchar](15) NULL,

@@ -1,50 +1,50 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="11/27/2025 6:23:04 PM"
+  DTS:CreationDate="12/3/2025 1:14:27 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-ALDO"
   DTS:CreatorName="ASUS-ALDO\ALDO"
-  DTS:DTSID="{40746E5E-BDC5-4054-AF37-7F772246C446}"
+  DTS:DTSID="{44DE2D36-7CE7-4CDA-8CAF-54BDEFDDA214}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="17.0.1008.3"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DimCustomer"
+  DTS:ObjectName="DimSupplier"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{5638FBA9-AE0E-4090-94A9-E211EB1DE5E3}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{79FBD396-3BEB-4CBB-A4EA-CB86C05C0E60}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Destination.NorthWindDW]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{71161092-30AB-4CB6-BE5B-2AADC1167AA3}"
+      DTS:DTSID="{B22B0E56-2439-47F3-9793-D303C2502A85}"
       DTS:ObjectName="Destination.NorthWindDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=NorthWindDW;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-DimCustomer-{71161092-30AB-4CB6-BE5B-2AADC1167AA3}localhost.NorthWindDW;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=NorthWindDW;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-DimSupplier-{B22B0E56-2439-47F3-9793-D303C2502A85}localhost.NorthWindDW;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Source.NorthWindOLTP]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{E0D8BC66-A8B5-4C88-B1C8-C5528D64CC26}"
+      DTS:DTSID="{C20C70AD-A0BE-4621-AD0C-974B8EBCF7DF}"
       DTS:ObjectName="Source.NorthWindOLTP">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=NorthWindOLTP;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-DimCustomer-{E0D8BC66-A8B5-4C88-B1C8-C5528D64CC26}localhost.NorthWindOLTP;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=NorthWindOLTP;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-DimSupplier-{C20C70AD-A0BE-4621-AD0C-974B8EBCF7DF}localhost.NorthWindOLTP;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{44330A19-E3C0-4BB0-A22C-BCF2A374456A}"
+      DTS:DTSID="{CFA12E66-1692-402D-803E-54999B904BB2}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="dbts">
@@ -53,7 +53,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{EA72FB85-F3D5-483C-A6A4-F6214331A44E}"
+      DTS:DTSID="{69FD8638-1533-45E0-9E63-2274098CB891}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="lastRowVersion">
@@ -66,7 +66,7 @@
       DTS:refId="Package\clean-up staging"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{B91C70F7-E536-4A14-AEBE-A628D7AB1A87}"
+      DTS:DTSID="{e6d75841-edb5-4e9d-bf3b-74d39be3e48f}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="clean-up staging"
@@ -74,15 +74,15 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{71161092-30AB-4CB6-BE5B-2AADC1167AA3}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [staging].[Customer];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{B22B0E56-2439-47F3-9793-D303C2502A85}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [staging].[Supplier];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Get Database Row Version"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{771035E9-A350-4E75-A672-A4802AEBC397}"
+      DTS:DTSID="{dd7709f6-5d3a-4350-a151-80448852e6b2}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Database Row Version"
@@ -90,7 +90,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0D8BC66-A8B5-4C88-B1C8-C5528D64CC26}"
+          SQLTask:Connection="{C20C70AD-A0BE-4621-AD0C-974B8EBCF7DF}"
           SQLTask:SqlStatementSource="EXECUTE [dbo].[GetDatabaseRowVersion]"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -103,7 +103,7 @@
       DTS:refId="Package\Get LastRowVersion"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{5D318763-A1F1-4E4A-873F-81BA760A586E}"
+      DTS:DTSID="{df0ee0eb-cbc5-4cc5-ae90-8c6c5032eda5}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LastRowVersion"
@@ -111,8 +111,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{71161092-30AB-4CB6-BE5B-2AADC1167AA3}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[GetLastPackageRowVersion] @tableName = 'Customer'"
+          SQLTask:Connection="{B22B0E56-2439-47F3-9793-D303C2502A85}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[GetLastPackageRowVersion] @tableName = 'Supplier'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LastRowVersion"
@@ -121,13 +121,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Load Customer"
+      DTS:refId="Package\Load Supplier"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{AE1ABD4A-5E1B-4CCA-BB9A-479AC2BD682F}"
+      DTS:DTSID="{3d2f2f4f-8583-43b6-a675-9666bab7d91a}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load Customer"
+      DTS:ObjectName="Load Supplier"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -135,11 +135,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Load Customer\Get Customers"
+              refId="Package\Load Supplier\Get Supplier"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Get Customers"
+              name="Get Supplier"
               usesDispositions="true"
               version="7">
               <properties>
@@ -159,7 +159,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">EXECUTE [dbo].[GetCustomerChangesByRowVersion] @startRow = ?,@endRow = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">EXECUTE [dbo].[GetSupplierChangesByRowVersion] @startRow = ?,@endRow = ?</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -180,11 +180,11 @@
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"@startRow:Input",{EA72FB85-F3D5-483C-A6A4-F6214331A44E};"@endRow:Input",{44330A19-E3C0-4BB0-A22C-BCF2A374456A};</property>
+                  name="ParameterMapping">"@startRow:Input",{69FD8638-1533-45E0-9E63-2274098CB891};"@endRow:Input",{CFA12E66-1692-402D-803E-54999B904BB2};</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Customer\Get Customers.Connections[OleDbConnection]"
+                  refId="Package\Load Supplier\Get Supplier.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Source.NorthWindOLTP]"
                   connectionManagerRefId="Package.ConnectionManagers[Source.NorthWindOLTP]"
                   description="The OLE DB runtime connection used to access the database."
@@ -192,197 +192,194 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output]"
+                  refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CustomerID]"
-                      dataType="wstr"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[SupplierID]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
-                      length="5"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CustomerID]"
-                      name="CustomerID"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[SupplierID]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[SupplierID]"
+                      name="SupplierID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[CompanyName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
                       length="40"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[CompanyName]"
                       name="CompanyName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[ContactTitle]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
                       length="30"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactName]"
-                      name="ContactName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactTitle]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
-                      length="30"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[ContactTitle]"
                       name="ContactTitle"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Address]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Address]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[Address]"
                       length="60"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Address]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Address]"
                       name="Address"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[City]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[City]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[City]"
                       length="15"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[City]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[City]"
                       name="City"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Region]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Region]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[Region]"
                       length="15"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Region]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Region]"
                       name="Region"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Country]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[Country]"
                       length="15"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Country]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Country]"
                       name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      length="10"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      name="PostalCode"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
-                      dataType="wstr"
-                      length="5"
-                      name="CustomerID" />
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
                       dataType="wstr"
                       length="40"
                       name="CompanyName" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
-                      dataType="wstr"
-                      length="30"
-                      name="ContactName" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
                       dataType="wstr"
                       length="30"
                       name="ContactTitle" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[Address]"
                       dataType="wstr"
                       length="60"
                       name="Address" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[City]"
                       dataType="wstr"
                       length="15"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[Region]"
                       dataType="wstr"
                       length="15"
                       name="Region" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[Country]"
                       dataType="wstr"
                       length="15"
                       name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
-                      dataType="wstr"
-                      length="5"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
-                      name="CustomerID" />
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[SupplierID]"
+                      dataType="i4"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[SupplierID]"
+                      name="SupplierID" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
                       name="CompanyName" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
                       dataType="wstr"
                       length="30"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ContactName]"
-                      name="ContactName" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
-                      dataType="wstr"
-                      length="30"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
                       name="ContactTitle" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[Address]"
                       dataType="wstr"
                       length="60"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[Address]"
                       name="Address" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[City]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[City]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[City]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[City]"
                       name="City" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[Region]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[Region]"
                       name="Region" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[Country]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[Country]"
                       name="Country" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -391,11 +388,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Customer\Load New Customers"
+              refId="Package\Load Supplier\Load New Supplier"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Load New Customers"
+              name="Load New Supplier"
               usesDispositions="true"
               version="4">
               <properties>
@@ -406,7 +403,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DimCustomer]</property>
+                  name="OpenRowset">[dbo].[DimSupplier]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -448,7 +445,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Customer\Load New Customers.Connections[OleDbConnection]"
+                  refId="Package\Load Supplier\Load New Supplier.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Destination.NorthWindDW]"
                   connectionManagerRefId="Package.ConnectionManagers[Destination.NorthWindDW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -456,136 +453,134 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[Address]"
-                      cachedDataType="wstr"
-                      cachedLength="60"
-                      cachedName="Address"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Address]" />
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                      cachedDataType="i4"
+                      cachedName="SupplierID"
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[SupplierID]" />
                     <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Region"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[Country]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Country"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[CustomerID]"
-                      cachedDataType="wstr"
-                      cachedLength="5"
-                      cachedName="CustomerID"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CustomerID]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[CompanyName]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[CompanyName]"
                       cachedDataType="wstr"
                       cachedLength="40"
                       cachedName="CompanyName"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CompanyName]" />
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[CompanyName]" />
                     <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[ContactName]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="ContactName"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactName]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactName]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].Columns[ContactTitle]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[ContactTitle]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="ContactTitle"
-                      externalMetadataColumnId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[PostalCode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerSK]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[SupplierSK]"
                       dataType="i4"
-                      name="CustomerSK" />
+                      name="SupplierSK" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
-                      dataType="wstr"
-                      length="5"
-                      name="CustomerID" />
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
                       dataType="wstr"
                       length="40"
                       name="CompanyName" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactName]"
-                      dataType="wstr"
-                      length="30"
-                      name="ContactName" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
                       dataType="wstr"
                       length="30"
                       name="ContactTitle" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
                       dataType="wstr"
                       length="60"
                       name="Address" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       dataType="wstr"
                       length="15"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
                       dataType="wstr"
                       length="15"
                       name="Region" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
                       dataType="wstr"
                       length="15"
                       name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Customer\Load New Customers.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Supplier\Load New Supplier.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Customer\Load New Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Supplier\Load New Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Load New Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Supplier\Load New Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Customer\Load New Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Supplier\Load New Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Load New Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Supplier\Load New Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -594,7 +589,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Customer\Lookup"
+              refId="Package\Load Supplier\Lookup"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -607,14 +602,14 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimCustomer]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimSupplier]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimCustomer]) [refTable]
-where [refTable].[CustomerID] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimSupplier]) [refTable]
+where [refTable].[SupplierID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -645,12 +640,12 @@ where [refTable].[CustomerID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CustomerSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerID" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyName" dataType="DT_WSTR" length="40" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ContactName" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ContactTitle" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Address" dataType="DT_WSTR" length="60" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="City" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Region" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Country" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SupplierSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SupplierID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyName" dataType="DT_WSTR" length="40" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ContactTitle" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Address" dataType="DT_WSTR" length="60" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="City" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Region" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Country" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PostalCode" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CustomerID]};</property>
+                  name="ParameterMap">#{Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[SupplierID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -662,7 +657,7 @@ where [refTable].[CustomerID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Customer\Lookup.Connections[OleDbConnection]"
+                  refId="Package\Load Supplier\Lookup.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Destination.NorthWindDW]"
                   connectionManagerRefId="Package.ConnectionManagers[Destination.NorthWindDW]"
                   description="Connection manager used to access lookup data."
@@ -670,20 +665,19 @@ where [refTable].[CustomerID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Customer\Lookup.Inputs[Lookup Input]"
+                  refId="Package\Load Supplier\Lookup.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Customer\Lookup.Inputs[Lookup Input].Columns[CustomerID]"
-                      cachedDataType="wstr"
-                      cachedLength="5"
-                      cachedName="CustomerID"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CustomerID]">
+                      refId="Package\Load Supplier\Lookup.Inputs[Lookup Input].Columns[SupplierID]"
+                      cachedDataType="i4"
+                      cachedName="SupplierID"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[SupplierID]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">CustomerID</property>
+                          name="JoinToReferenceColumn">SupplierID</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -696,54 +690,54 @@ where [refTable].[CustomerID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Customer\Lookup.Outputs[Lookup Match Output]"
+                  refId="Package\Load Supplier\Lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Load Customer\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load Supplier\Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Customer\Lookup.Outputs[Lookup Match Output].Columns[CustomerSK]"
+                      refId="Package\Load Supplier\Lookup.Outputs[Lookup Match Output].Columns[SupplierSK]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Load Customer\Lookup.Outputs[Lookup Match Output].Columns[CustomerSK]"
-                      name="CustomerSK"
+                      lineageId="Package\Load Supplier\Lookup.Outputs[Lookup Match Output].Columns[SupplierSK]"
+                      name="SupplierSK"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">CustomerSK</property>
+                          name="CopyFromReferenceColumn">SupplierSK</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load Customer\Lookup.Outputs[Lookup No Match Output]"
+                  refId="Package\Load Supplier\Lookup.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Load Customer\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load Supplier\Lookup.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load Customer\Lookup.Outputs[Lookup Error Output]"
+                  refId="Package\Load Supplier\Lookup.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Load Customer\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load Supplier\Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Customer\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Supplier\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Supplier\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Customer\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Supplier\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Supplier\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -752,11 +746,11 @@ where [refTable].[CustomerID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Load Customer\Update is existing Customers"
+              refId="Package\Load Supplier\Update is existing Supplier"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Update is existing Customers"
+              name="Update is existing Supplier"
               usesDispositions="true"
               version="4">
               <properties>
@@ -767,7 +761,7 @@ where [refTable].[CustomerID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[staging].[Customer]</property>
+                  name="OpenRowset">[staging].[Supplier]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -809,7 +803,7 @@ where [refTable].[CustomerID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Customer\Update is existing Customers.Connections[OleDbConnection]"
+                  refId="Package\Load Supplier\Update is existing Supplier.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Destination.NorthWindDW]"
                   connectionManagerRefId="Package.ConnectionManagers[Destination.NorthWindDW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -817,130 +811,130 @@ where [refTable].[CustomerID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[Address]"
-                      cachedDataType="wstr"
-                      cachedLength="60"
-                      cachedName="Address"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Address]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Region"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[Country]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Country"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[CustomerSK]"
-                      cachedDataType="i4"
-                      cachedName="CustomerSK"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerSK]"
-                      lineageId="Package\Load Customer\Lookup.Outputs[Lookup Match Output].Columns[CustomerSK]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[ContactName]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="ContactName"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactName]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactName]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[ContactTitle]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="ContactTitle"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].Columns[CompanyName]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[CompanyName]"
                       cachedDataType="wstr"
                       cachedLength="40"
                       cachedName="CompanyName"
-                      externalMetadataColumnId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
-                      lineageId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output].Columns[CompanyName]" />
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[CompanyName]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[ContactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactTitle"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].Columns[SupplierSK]"
+                      cachedDataType="i4"
+                      cachedName="SupplierSK"
+                      externalMetadataColumnId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[SupplierSK]"
+                      lineageId="Package\Load Supplier\Lookup.Outputs[Lookup Match Output].Columns[SupplierSK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerSK]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[SupplierSK]"
                       dataType="i4"
-                      name="CustomerSK" />
+                      name="SupplierSK" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
                       dataType="wstr"
                       length="40"
                       name="CompanyName" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactName]"
-                      dataType="wstr"
-                      length="30"
-                      name="ContactName" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
                       dataType="wstr"
                       length="30"
                       name="ContactTitle" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
                       dataType="wstr"
                       length="60"
                       name="Address" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       dataType="wstr"
                       length="15"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
                       dataType="wstr"
                       length="15"
                       name="Region" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
                       dataType="wstr"
                       length="15"
                       name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Customer\Update is existing Customers.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Supplier\Update is existing Supplier.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Update is existing Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Supplier\Update is existing Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Customer\Update is existing Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Supplier\Update is existing Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Customer\Update is existing Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Supplier\Update is existing Supplier.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -951,20 +945,20 @@ where [refTable].[CustomerID] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Load Customer.Paths[Lookup Match Output]"
-              endId="Package\Load Customer\Update is existing Customers.Inputs[OLE DB Destination Input]"
+              refId="Package\Load Supplier.Paths[Lookup Match Output]"
+              endId="Package\Load Supplier\Update is existing Supplier.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Load Customer\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Load Supplier\Lookup.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Load Customer.Paths[Lookup No Match Output]"
-              endId="Package\Load Customer\Load New Customers.Inputs[OLE DB Destination Input]"
+              refId="Package\Load Supplier.Paths[Lookup No Match Output]"
+              endId="Package\Load Supplier\Load New Supplier.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Load Customer\Lookup.Outputs[Lookup No Match Output]" />
+              startId="Package\Load Supplier\Lookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Load Customer.Paths[OLE DB Source Output]"
-              endId="Package\Load Customer\Lookup.Inputs[Lookup Input]"
+              refId="Package\Load Supplier.Paths[OLE DB Source Output]"
+              endId="Package\Load Supplier\Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Load Customer\Get Customers.Outputs[OLE DB Source Output]" />
+              startId="Package\Load Supplier\Get Supplier.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -973,7 +967,7 @@ where [refTable].[CustomerID] = ?</property>
       DTS:refId="Package\Sync Staging"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{BB8E14A2-1C16-417C-862C-5FD15E1EB6B1}"
+      DTS:DTSID="{8af0b5b8-0419-48c0-996b-b28032b09452}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Sync Staging"
@@ -981,15 +975,15 @@ where [refTable].[CustomerID] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{71161092-30AB-4CB6-BE5B-2AADC1167AA3}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[DW_MergeDimCustomer] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{B22B0E56-2439-47F3-9793-D303C2502A85}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[DW_MergeDimSupplier]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Update config"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{46D0A935-6DFA-4CA7-955B-55B5B6D5DAAF}"
+      DTS:DTSID="{304ce345-cbe1-4eb8-988e-498aa279ec21}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update config"
@@ -997,8 +991,8 @@ where [refTable].[CustomerID] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{71161092-30AB-4CB6-BE5B-2AADC1167AA3}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName = 'Customer',@lastRowVersion = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          SQLTask:Connection="{B22B0E56-2439-47F3-9793-D303C2502A85}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName = 'Supplier',@lastRowVersion = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
             SQLTask:DtsVariableName="User::dbts"
@@ -1013,7 +1007,7 @@ where [refTable].[CustomerID] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{4BDEC40B-F574-4C77-B3D4-98EA16EDB837}"
+      DTS:DTSID="{917FB77C-6BA0-4661-8493-31AF18CB6E07}"
       DTS:From="Package\Get Database Row Version"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1021,7 +1015,7 @@ where [refTable].[CustomerID] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{FB3ADA3E-74B0-44DB-B4C6-EDAAE9BE4ADB}"
+      DTS:DTSID="{9F2E5C66-7497-425C-8536-A9463AF8C3FF}"
       DTS:From="Package\Get LastRowVersion"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -1029,23 +1023,23 @@ where [refTable].[CustomerID] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{4FA71B43-3152-4F34-B7E2-DE6F0CF2065F}"
+      DTS:DTSID="{FF38F2AB-4350-41D8-BF9F-AF3FF4CAF679}"
       DTS:From="Package\clean-up staging"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Load Customer" />
+      DTS:To="Package\Load Supplier" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{1AE08507-9159-4435-B7AA-F1C484234DED}"
-      DTS:From="Package\Load Customer"
+      DTS:DTSID="{7C3B2F2B-AD18-4931-923A-1979EE4DFF71}"
+      DTS:From="Package\Load Supplier"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Sync Staging" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{36167137-FC9C-4854-910F-74ADC93EAAB3}"
+      DTS:DTSID="{104BDC75-5BF2-40C9-A0E5-63F107332DA9}"
       DTS:From="Package\Sync Staging"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
@@ -1064,131 +1058,131 @@ where [refTable].[CustomerID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\clean-up staging"
-          TopLeft="148.749993350357,253.157891957218" />
-        <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\Get Database Row Version"
-          TopLeft="119.374994663522,97.8421041888709" />
+          TopLeft="197.499991171062,32.8421049025581" />
         <NodeLayout
           Size="177.333333333334,42.6666666666667"
           Id="Package\Get LastRowVersion"
-          TopLeft="133.74999402091,166.2631560692" />
+          TopLeft="213.12499047257,132.771929494012" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="301.64582415515,75.5087715692247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.2631579247868"
+              Start="0,0"
+              End="0,49.7631579247868">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.7631579247868" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Load Customer"
-          TopLeft="148.749993350357,352.368417183696" />
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\clean-up staging"
+          TopLeft="224.999989941717,230.649122529055" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="302.72915687381,175.438596160678">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.2105263683769"
+              Start="0,0"
+              End="0,47.7105263683769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.7105263683769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="145.333333333334,42.6666666666667"
+          Id="Package\Load Supplier"
+          TopLeft="238.124989354983,326.473684007689" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="307.229156315017,273.315789195722">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.157894811967"
+              Start="0,0"
+              End="0,45.657894811967">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.657894811967" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="142.666666666667,42.6666666666667"
           Id="Package\Sync Staging"
-          TopLeft="152.499993182719,451.578942410173" />
+          TopLeft="238.124989354983,418.736837507615" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="310.124989354983,369.140350674355">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.5964868332599"
+              Start="0,0"
+              End="0,42.0964868332599">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.0964868332599" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="145.333333333334,42.6666666666667"
           Id="Package\Update config"
-          TopLeft="154.3749930989,573.36841475716" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="222.895827675549,140.508770855538">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.7543852136625"
-              Start="0,0"
-              End="0,18.2543852136625">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.2543852136625" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="224.9166603523,208.929822735867">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.2280692213516"
-              Start="0,0"
-              End="0,36.7280692213516">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.7280692213516" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="226.08332668369,295.824558623885">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56.5438585598114"
-              Start="0,0"
-              End="0,49.0438585598114">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.0438585598114" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="224.291659933205,395.035083850363">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56.5438585598103"
-              Start="0,0"
-              End="0,49.0438585598103">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.0438585598103" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="232.49998960644,517.298241061462" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="225.437493140809,494.24560907684">
+          TopLeft="307.312489480712,461.403504174282">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,79.12280568032"
+              EndConnector="0,55.8947368871802"
               Start="0,0"
-              End="0,71.62280568032">
+              End="0,48.3947368871802">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.62280568032" />
+                    End="0,48.3947368871802" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1201,40 +1195,40 @@ where [refTable].[CustomerID] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load Customer">
+    design-time-name="Package\Load Supplier">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="181.333333333334,42.6666666666667"
-          Id="Package\Load Customer\Load New Customers"
-          TopLeft="367.49998357147,411.210521800779" />
+          Size="205.333333333334,42.6666666666667"
+          Id="Package\Load Supplier\Update is existing Supplier"
+          TopLeft="108.124995166436,412.578942838386" />
         <NodeLayout
           Size="114.666666666667,42.6666666666667"
-          Id="Package\Load Customer\Lookup"
+          Id="Package\Load Supplier\Lookup"
           TopLeft="246.249988991767,226.47368172389" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
-          Id="Package\Load Customer\Get Customers"
-          TopLeft="234.374989522621,78.6842096623787" />
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\Load Supplier\Load New Supplier"
+          TopLeft="367.49998357147,411.210521800779" />
         <NodeLayout
-          Size="218.666666666667,42.6666666666667"
-          Id="Package\Load Customer\Update is existing Customers"
-          TopLeft="108.124995166436,412.578942838386" />
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Load Supplier\Get Supplier"
+          TopLeft="234.374989522621,78.6842096623787" />
         <EdgeLayout
-          Id="Package\Load Customer.Paths[OLE DB Source Output]"
-          TopLeft="306.645822590527,121.350876329045">
+          Id="Package\Load Supplier.Paths[OLE DB Source Output]"
+          TopLeft="303.812489257194,121.350876329045">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,105.122805394844"
+              EndConnector="0,105.122805394845"
               Start="0,0"
-              End="0,97.6228053948444">
+              End="0,97.6228053948446">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,97.6228053948444" />
+                    End="0,97.6228053948446" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1244,74 +1238,74 @@ where [refTable].[CustomerID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Customer.Paths[Lookup No Match Output]"
-          TopLeft="321.361100102878,269.140348390556">
+          Id="Package\Load Supplier.Paths[Lookup No Match Output]"
+          TopLeft="321.361100102878,269.140348390557">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.805550135258,142.070173410223"
+              EndConnector="130.805550135259,142.070173410222"
               Start="0,0"
-              End="136.805550135258,134.570173410223">
+              End="130.805550135259,134.570173410222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.0011258417881" />
+                    End="0,54.001125841788" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.0011258417881"
-                    Point2="0,58.0011258417881"
-                    Point3="4,58.0011258417881" />
+                    Point1="0,54.001125841788"
+                    Point2="0,58.001125841788"
+                    Point3="4,58.001125841788" />
                   <mssgle:LineSegment
-                    End="132.805550135258,58.0011258417881" />
+                    End="126.805550135259,58.001125841788" />
                   <mssgle:CubicBezierSegment
-                    Point1="132.805550135258,58.0011258417881"
-                    Point2="136.805550135258,58.0011258417881"
-                    Point3="136.805550135258,62.0011258417881" />
+                    Point1="126.805550135259,58.001125841788"
+                    Point2="130.805550135259,58.001125841788"
+                    Point3="130.805550135259,62.001125841788" />
                   <mssgle:LineSegment
-                    End="136.805550135258,134.570173410223" />
+                    End="130.805550135259,134.570173410222" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="12.596388348879,63.0011258417881,111.6127734375,11.609375"
+              BoundingBox="9.59638834887931,63.001125841788,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Customer.Paths[Lookup Match Output]"
-          TopLeft="285.805544547323,269.140348390556">
+          Id="Package\Load Supplier.Paths[Lookup Match Output]"
+          TopLeft="285.805544547323,269.140348390557">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-68.3472160475536,143.43859444783"
+              EndConnector="-75.0138827142198,143.438594447829"
               Start="0,0"
-              End="-68.3472160475536,135.93859444783">
+              End="-75.0138827142198,135.938594447829">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5597931461323" />
+                    End="0,54.5597931461322" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.5597931461323"
-                    Point2="0,58.5597931461323"
-                    Point3="-4,58.5597931461323" />
+                    Point1="0,54.5597931461322"
+                    Point2="0,58.5597931461322"
+                    Point3="-4,58.5597931461322" />
                   <mssgle:LineSegment
-                    End="-64.3472160475536,58.5597931461323" />
+                    End="-71.0138827142198,58.5597931461322" />
                   <mssgle:CubicBezierSegment
-                    Point1="-64.3472160475536,58.5597931461323"
-                    Point2="-68.3472160475536,58.5597931461323"
-                    Point3="-68.3472160475536,62.5597931461323" />
+                    Point1="-71.0138827142198,58.5597931461322"
+                    Point2="-75.0138827142198,58.5597931461322"
+                    Point3="-75.0138827142198,62.5597931461322" />
                   <mssgle:LineSegment
-                    End="-68.3472160475536,135.93859444783" />
+                    End="-75.0138827142198,135.938594447829" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-82.3649947425268,63.5597931461323,96.3827734375,11.609375"
+              BoundingBox="-85.6983280758599,63.5597931461322,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1319,7 +1313,7 @@ where [refTable].[CustomerID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\Load New Customers">
+    design-time-name="Package\Load Supplier\Update is existing Supplier">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1332,22 +1326,22 @@ where [refTable].[CustomerID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\Lookup">
+    design-time-name="Package\Load Supplier\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimCustomer]</Value>
+          type="q3:string">[dbo].[DimSupplier]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1355,15 +1349,7 @@ where [refTable].[CustomerID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\Get Customers">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\Update is existing Customers">
+    design-time-name="Package\Load Supplier\Load New Supplier">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1372,6 +1358,14 @@ where [refTable].[CustomerID] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Supplier\Get Supplier">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

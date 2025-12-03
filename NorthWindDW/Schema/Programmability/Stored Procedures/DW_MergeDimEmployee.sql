@@ -2,7 +2,7 @@
 AS
 BEGIN
 
-    UPDATE dc
+    UPDATE de
     SET [FirstName] = se.[FirstName],
         [LastName] = se.[LastName],
         [Title] = se.[Title],

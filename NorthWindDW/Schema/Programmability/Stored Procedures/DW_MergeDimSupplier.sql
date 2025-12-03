@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[DW_MergeDimSupplier]
 AS
 BEGIN
-    UPDATE dc
+    UPDATE ds
     SET [CompanyName] = ss.[CompanyName],
         [ContactTitle] = ss.[ContactTitle],
         [Address] = ss.[Address],

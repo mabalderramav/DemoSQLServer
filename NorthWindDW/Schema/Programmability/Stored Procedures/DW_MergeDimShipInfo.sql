@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[DW_MergeDimShipInfo]
 AS
 BEGIN
-    UPDATE dc
+    UPDATE ds
     SET [Address]        = ss.[Address],
         [City]           = ss.[City],
         [Region]        = ss.[Region],

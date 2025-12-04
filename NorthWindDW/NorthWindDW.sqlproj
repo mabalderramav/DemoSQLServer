@@ -70,7 +70,6 @@
     <Build Include="Schema\Tables\dbo\DimCustomer.sql" />
     <Build Include="Schema\Tables\dbo\DimDate.sql" />
     <Build Include="Schema\Tables\dbo\DimEmployee.sql" />
-    <Build Include="Schema\Tables\dbo\DimnSupplier.sql" />
     <Build Include="Schema\Tables\dbo\DimProduct.sql" />
     <Build Include="Schema\Tables\dbo\DimShipInfo.sql" />
     <Build Include="Schema\Tables\dbo\DimShipper.sql" />
@@ -81,14 +80,12 @@
     <Build Include="Schema\Security\schemas\staging.sql" />
     <Build Include="Schema\Tables\staging\staging.Customer.sql" />
     <Build Include="Schema\Tables\staging\staging.Employee.sql" />
-    <Build Include="Schema\Tables\staging\staging.Supplier.sql" />
     <Build Include="Schema\Tables\staging\staging.Product.sql" />
     <Build Include="Schema\Tables\staging\staging.ShipInfo.sql" />
     <Build Include="Schema\Tables\staging\staging.Shipper.sql" />
     <Build Include="Schema\Tables\staging\staging.Orders.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
-    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimSupplier.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimProduct.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShipInfo.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShipper.sql" />

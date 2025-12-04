@@ -4,7 +4,6 @@
     [EmployeeSK] [int] NOT NULL,
     [ShipperSK] [int] NOT NULL,
     [CustomerSK] [int] NOT NULL,
-    [SupplierSK] [int] NOT NULL,
     [ProductSK] [int] NOT NULL,
     [ShipInfoSK] [int] NOT NULL,
     [OrderDateSK] [int] NOT NULL,

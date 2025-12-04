@@ -14,13 +14,6 @@ IF NOT EXISTS(SELECT  1
 GO
 IF NOT EXISTS(SELECT  1
               FROM [dbo].[PackageConfig]
-              WHERE [TableName] = 'Supplier')
-    BEGIN
-        INSERT [dbo].[PackageConfig] ([TableName], [LastRowVersion]) VALUES ('Supplier', 0)
-    END
-GO
-IF NOT EXISTS(SELECT  1
-              FROM [dbo].[PackageConfig]
               WHERE [TableName] = 'Product')
     BEGIN
         INSERT [dbo].[PackageConfig] ([TableName], [LastRowVersion]) VALUES ('Product', 0)

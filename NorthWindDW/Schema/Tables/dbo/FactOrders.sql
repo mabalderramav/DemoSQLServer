@@ -4,7 +4,6 @@
 	[EmployeeSK] [int] NOT NULL,
 	[ShipperSK] [int] NOT NULL,
 	[CustomerSK] [int] NOT NULL,
-	[SupplierSK] [int] NOT NULL,
 	[ProductSK] [int] NOT NULL,
 	[ShipInfoSK] [int] NOT NULL,
 	[OrderDateSK] [int] NOT NULL,
@@ -60,9 +59,4 @@ ALTER TABLE [dbo].[FactOrders]  WITH CHECK ADD  CONSTRAINT [FK_orders_fact_shipp
 REFERENCES [dbo].[DimShipper] ([ShipperSK])
 GO
 ALTER TABLE [dbo].[FactOrders] CHECK CONSTRAINT [FK_orders_fact_shipper_sk]
-GO
-ALTER TABLE [dbo].[FactOrders]  WITH CHECK ADD  CONSTRAINT [FK_orders_fact_supplier_sk] FOREIGN KEY([SupplierSK])
-REFERENCES [dbo].[DimSupplier] ([SupplierSK])
-GO
-ALTER TABLE [dbo].[FactOrders] CHECK CONSTRAINT [FK_orders_fact_supplier_sk]
 GO

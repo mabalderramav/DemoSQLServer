@@ -89,6 +89,7 @@
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimProduct.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShipInfo.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShipper.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeFactOrders.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="NorthWindDW.refactorlog" />

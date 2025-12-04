@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimShipper"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{6FF489CB-C60B-4871-81DB-7629476C7FD9}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{5240F1CC-E64B-401E-BF81-259951EF1E75}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -857,18 +857,18 @@ where [refTable].[ShipperID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="345.624990584329,287.649121244418">
+          TopLeft="345.624990584329,287.649121244419">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.3157894811968"
+              EndConnector="0,59.3157894811964"
               Start="0,0"
-              End="0,51.8157894811968">
+              End="0,51.8157894811964">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.8157894811968" />
+                    End="0,51.8157894811964" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -883,14 +883,14 @@ where [refTable].[ShipperID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.3684210376067"
+              EndConnector="0,61.3684210376063"
               Start="0,0"
-              End="0,53.8684210376067">
+              End="0,53.8684210376063">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.8684210376067" />
+                    End="0,53.8684210376063" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

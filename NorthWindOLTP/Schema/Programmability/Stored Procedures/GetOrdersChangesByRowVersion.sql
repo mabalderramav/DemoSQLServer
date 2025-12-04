@@ -45,6 +45,10 @@ BEGIN
                                         END)))
                             END,
           ord.[Freight],
+          ord.[ShipAddress],
+          ord.[ShipCity],
+          ord.[ShipRegion],
+          ord.[ShipCountry],
           det.[UnitPrice],
           det.[Quantity],
           det.[Discount]

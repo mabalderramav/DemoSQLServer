@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ASUS-ALDO</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcmc+03AuKkGc1BB1PKsZVgAAAAACAAAAAAAQZgAAAAEAACAAAAAOZbKEVWKu5SWMK+sUk3zqrdiz/ilnMmnqP8BUnR7IpAAAAAAOgAAAAAIAACAAAAB1Q3Iiex5LfgzOg8l9L26eqnebExwiDd560oT5NLMLA5AAAADYqIYMTw78k5FjBWnctb8rGkvNM1ercBIc+Osqj9ThKyGalpTc8ek8OdQp8NSPJxKZ52iTgsJ/0/l3isMdLaq1roUboLwFayDkuKu+X2ht4IAQS+tq4uem/3eQknwmOqnr/Nm7BpzGPPj3oHUx0XaN0JTUGVkJHPgCIYfZ8MprJbG9loAuFD3u9/Wj7vZRsJpAAAAAto5/3SglJ46HgwN9UaSohMg+OBWKAZQ2ficuhz5w1nUXfM/Zc9utoanafWAZmSFQlIXN8k2bqne3zo8PYdS5hg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcmc+03AuKkGc1BB1PKsZVgAAAAACAAAAAAAQZgAAAAEAACAAAABaAIXbfcHOrjeOiODSPO8rQs8lsQuEh4tlqKAZIs17dwAAAAAOgAAAAAIAACAAAAAOguGcULLPPREE1YGpJ0lp4SPJx5U/PY/G9hy2ArwbKpAAAABQd1kPl+f4+7n5vGCNsNrxSKLWMCYEGMvu3IovnMbLJoAnGvh58ArZNXXFI1iMHP4lMEquy+/fVqeboPUKJdQhsijKv+aG0XBC7T06OTqiW/weuVcjoUGb6u2N76hcjTy1J7qdzXjJHp4d9ThozfzWDEnjF0HKG+IOnVgQujD0SuDQTMLHIwoOTBqy6iBi7TlAAAAAMtnaYhXvaBONlEUlZQGGFTFTuVbVaqnvWzbqFEyiREbulpPI3ZZgECuy4njD/LhJhQtmEDsOse3YTbnPn7GoRA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -683,10 +683,10 @@
                 <SSIS:Property SSIS:Name="Name">DimShipper</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6FF489CB-C60B-4871-81DB-7629476C7FD9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5240F1CC-E64B-401E-BF81-259951EF1E75}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1637,10 +1637,10 @@
                 <SSIS:Property SSIS:Name="Name">FactOrders</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">29</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5F603133-FD83-4E5C-88AC-7981C6576DD9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CF8A6542-D93C-45F3-A34D-E454A781BD77}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1673,7 +1673,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=;Initial Catalog=NorthWindDW;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-FactOrders-{1696575A-6EDE-4A20-BE23-D523A8F658D0}localhost.NorthWindDW;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;Initial Catalog=NorthWindDW;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FactOrders-{1696575A-6EDE-4A20-BE23-D523A8F658D0}localhost.NorthWindDW;Trust Server Certificate=True;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1792,8 +1792,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1823,7 +1821,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=;Initial Catalog=NorthWindOLTP;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-FactOrders-{CEF8F70E-0BDC-4B70-8B96-5075404B1F68}localhost.NorthWindOLTP;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;Initial Catalog=NorthWindOLTP;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FactOrders-{CEF8F70E-0BDC-4B70-8B96-5075404B1F68}localhost.NorthWindOLTP;Trust Server Certificate=True;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1942,8 +1940,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

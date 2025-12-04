@@ -13,5 +13,4 @@
     [UnitPrice] [money] NOT NULL,
     [Quantity] [smallint] NOT NULL,
     [Discount] [real] NOT NULL,
-    [ActualCost] [money] NOT NULL,
 )

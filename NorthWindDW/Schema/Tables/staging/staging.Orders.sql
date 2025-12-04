@@ -10,9 +10,9 @@
     [OrderDateSK] [int] NOT NULL,
     [RequiredDateSK] [int] NOT NULL,
     [ShippedDateSK] [int] NOT NULL,
-    [Freight] [real] NOT NULL,
-    [UnitPrice] [real] NOT NULL,
-    [Quantity] [int] NOT NULL,
+    [Freight] [money] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [Quantity] [smallint] NOT NULL,
     [Discount] [real] NOT NULL,
-    [ActualCost] [real] NOT NULL,
+    [ActualCost] [money] NOT NULL,
 )

@@ -487,6 +487,7 @@
           {
             "name": "Address",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Address",
             "sourceProviderType": "nvarchar"
           },
@@ -594,71 +595,82 @@
         ]
       },
       {
-        "name": "FactOrders",
+        "name": "Orders",
         "columns": [
           {
             "name": "OrderSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "OrderSK",
             "sourceProviderType": "int"
           },
           {
             "name": "OrderID",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "OrderID",
             "sourceProviderType": "int"
           },
           {
             "name": "EmployeeSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "EmployeeSK",
             "sourceProviderType": "int"
           },
           {
             "name": "ShipperSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShipperSK",
             "sourceProviderType": "int"
           },
           {
             "name": "CustomerSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "CustomerSK",
             "sourceProviderType": "int"
           },
           {
             "name": "ProductSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ProductSK",
             "sourceProviderType": "int"
           },
           {
             "name": "ShipInfoSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShipInfoSK",
             "sourceProviderType": "int"
           },
           {
             "name": "OrderDateSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "OrderDateSK",
             "sourceProviderType": "int"
           },
           {
             "name": "RequiredDateSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "RequiredDateSK",
             "sourceProviderType": "int"
           },
           {
             "name": "ShippedDateSK",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "ShippedDateSK",
             "sourceProviderType": "int"
           },
           {
             "name": "Freight",
             "dataType": "decimal",
+            "isHidden": true,
             "sourceColumn": "Freight",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "sourceProviderType": "money",
@@ -672,6 +684,7 @@
           {
             "name": "UnitPrice",
             "dataType": "decimal",
+            "isHidden": true,
             "sourceColumn": "UnitPrice",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "sourceProviderType": "money",
@@ -685,14 +698,62 @@
           {
             "name": "Quantity",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "Quantity",
             "sourceProviderType": "smallint"
           },
           {
             "name": "Discount",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Discount",
             "sourceProviderType": "real"
+          },
+          {
+            "type": "calculated",
+            "name": "GrossSales",
+            "dataType": "decimal",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "Orders[Quantity] * Orders[UnitPrice]",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "NetSales",
+            "dataType": "decimal",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "(Orders[GrossSales] - (Orders[GrossSales] * (Orders[Discount] * 100) / 100))",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "SalesType",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "IF(Orders[Quantity] > 50, \"Big Sale\", \"Simple Sale\")"
+          },
+          {
+            "type": "calculated",
+            "name": "DiscountType",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "IF(Orders[Discount] > 0.1, \"Big Discount\", \"Simple Discount\")"
           }
         ],
         "partitions": [
@@ -704,6 +765,84 @@
               "query": " \t\t\t\tSELECT [dbo].[FactOrders].*   FROM [dbo].[FactOrders] ",
               "dataSource": "SqlServer localhost NorthWindDW"
             }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalQuatity",
+            "expression": " SUM(Orders[Quantity])"
+          },
+          {
+            "name": "TotalBigSalesQuantity",
+            "expression": " CALCULATE(SUM(Orders[Quantity]),Orders[SalesType] = \"Big Sale\")"
+          },
+          {
+            "name": "TotalNormalSalesQuantity",
+            "expression": " CALCULATE(SUM(Orders[Quantity]),Orders[SalesType] = \"Simple Sale\")"
+          },
+          {
+            "name": "TotalGrossSales",
+            "expression": " SUM(Orders[GrossSales])"
+          },
+          {
+            "name": "TotalBigSalesGrossSales",
+            "expression": " CALCULATE(SUM(Orders[GrossSales]),Orders[SalesType] = \"Big Sale\")"
+          },
+          {
+            "name": "TotalNormalSalesGrossSales",
+            "expression": " CALCULATE(SUM(Orders[GrossSales]),Orders[SalesType] = \"Simple Sale\")"
+          },
+          {
+            "name": "TotalNetSales",
+            "expression": " SUM(Orders[NetSales])"
+          },
+          {
+            "name": "TotalBigSalesNetSales",
+            "expression": " CALCULATE(SUM(Orders[NetSales]),Orders[SalesType] = \"Big Sale\")"
+          },
+          {
+            "name": "TotalNormalSalesNetSales",
+            "expression": " CALCULATE(SUM(Orders[NetSales]),Orders[SalesType] = \"Simple Sale\")"
+          },
+          {
+            "name": "TotalOrders",
+            "expression": " DISTINCTCOUNT(Orders[OrderID])"
+          },
+          {
+            "name": "TotalQuantityBigDiscount",
+            "expression": " CALCULATE(Orders[TotalQuatity],Orders[DiscountType] = \"Big Discount\")"
+          },
+          {
+            "name": "TotalQuantityNormalDiscount",
+            "expression": " CALCULATE(Orders[TotalQuatity],Orders[DiscountType] = \"Simple Discount\")"
+          },
+          {
+            "name": "TotalGrossSaleBigDiscount",
+            "expression": " CALCULATE(Orders[TotalGrossSales],Orders[DiscountType] = \"Big Discount\")"
+          },
+          {
+            "name": "TotalGrossSaleNormalDiscount",
+            "expression": " CALCULATE(Orders[TotalGrossSales],Orders[DiscountType] = \"Simple Discount\")"
+          },
+          {
+            "name": "TotalNetSaleBigDiscount",
+            "expression": " CALCULATE(Orders[TotalNetSales],Orders[DiscountType] = \"Big Discount\")"
+          },
+          {
+            "name": "TotalNetSaleNormalDiscount",
+            "expression": " CALCULATE(Orders[TotalNetSales],Orders[DiscountType] = \"Simple Discount\")"
+          },
+          {
+            "name": "TotalProfit",
+            "expression": " DIVIDE([TotalNetSales],[TotalGrossSales])"
+          },
+          {
+            "name": "TotalBigSaleProfit",
+            "expression": " DIVIDE([TotalBigSalesNetSales],[TotalBigSalesGrossSales])"
+          },
+          {
+            "name": "TotalBigDiscountProfit",
+            "expression": " DIVIDE([TotalNetSaleBigDiscount],[TotalGrossSaleBigDiscount])"
           }
         ],
         "annotations": [
@@ -725,7 +864,7 @@
     "relationships": [
       {
         "name": "f34107cf-bf38-49ca-8e28-534c5aa4bc1c",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "RequiredDateSK",
         "toTable": "Date",
         "toColumn": "DateKey",
@@ -733,7 +872,7 @@
       },
       {
         "name": "c05a5a0f-16fd-41f1-80b8-a4c9a988725f",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "ShippedDateSK",
         "toTable": "Date",
         "toColumn": "DateKey",
@@ -741,45 +880,245 @@
       },
       {
         "name": "b1e5d886-04e2-4e11-85f3-b390957566b3",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "CustomerSK",
         "toTable": "Customer",
         "toColumn": "CustomerSK"
       },
       {
         "name": "e8586825-261c-4a12-95ec-fce36a3088e5",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "OrderDateSK",
         "toTable": "Date",
         "toColumn": "DateKey"
       },
       {
         "name": "9185087d-8dcb-4f27-8aa6-ac05d0403587",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "EmployeeSK",
         "toTable": "Employee",
         "toColumn": "EmployeeSK"
       },
       {
         "name": "2d10fafe-4e0f-47f1-8842-680d4f8da9bd",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "ProductSK",
         "toTable": "Product",
         "toColumn": "ProductSK"
       },
       {
         "name": "106aed5e-9512-4df5-93f0-419d5aa8d4b4",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "ShipInfoSK",
         "toTable": "ShipInfo",
         "toColumn": "ShipinfoSK"
       },
       {
         "name": "33c0d3c5-1dba-4128-99a9-8836ad89c7c9",
-        "fromTable": "FactOrders",
+        "fromTable": "Orders",
         "fromColumn": "ShipperSK",
         "toTable": "Shipper",
         "toColumn": "ShipperSK"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "HR",
+        "tables": [
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "CalendarYear"
+              },
+              {
+                "name": "MonthName"
+              }
+            ]
+          },
+          {
+            "name": "Employee",
+            "columns": [
+              {
+                "name": "Employee Name"
+              },
+              {
+                "name": "FirstName"
+              },
+              {
+                "name": "HireDate"
+              },
+              {
+                "name": "LastName"
+              },
+              {
+                "name": "PostalCode"
+              },
+              {
+                "name": "Region"
+              },
+              {
+                "name": "Title"
+              }
+            ]
+          },
+          {
+            "name": "Orders",
+            "measures": [
+              {
+                "name": "TotalNetSaleBigDiscount"
+              },
+              {
+                "name": "TotalNetSaleNormalDiscount"
+              },
+              {
+                "name": "TotalNetSales"
+              },
+              {
+                "name": "TotalQuantityBigDiscount"
+              },
+              {
+                "name": "TotalQuantityNormalDiscount"
+              },
+              {
+                "name": "TotalQuatity"
+              }
+            ]
+          },
+          {
+            "name": "Product",
+            "columns": [
+              {
+                "name": "CategoryName"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sales",
+        "tables": [
+          {
+            "name": "Customer",
+            "columns": [
+              {
+                "name": "CompanyName"
+              },
+              {
+                "name": "ContactName"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "CalendarYear"
+              },
+              {
+                "name": "MonthName"
+              }
+            ]
+          },
+          {
+            "name": "Orders",
+            "measures": [
+              {
+                "name": "TotalBigDiscountProfit"
+              },
+              {
+                "name": "TotalBigSaleProfit"
+              },
+              {
+                "name": "TotalBigSalesGrossSales"
+              },
+              {
+                "name": "TotalBigSalesNetSales"
+              },
+              {
+                "name": "TotalBigSalesQuantity"
+              },
+              {
+                "name": "TotalGrossSaleBigDiscount"
+              },
+              {
+                "name": "TotalGrossSaleNormalDiscount"
+              },
+              {
+                "name": "TotalGrossSales"
+              },
+              {
+                "name": "TotalNetSaleBigDiscount"
+              },
+              {
+                "name": "TotalNetSaleNormalDiscount"
+              },
+              {
+                "name": "TotalNetSales"
+              },
+              {
+                "name": "TotalNormalSalesGrossSales"
+              },
+              {
+                "name": "TotalNormalSalesNetSales"
+              },
+              {
+                "name": "TotalNormalSalesQuantity"
+              },
+              {
+                "name": "TotalOrders"
+              },
+              {
+                "name": "TotalProfit"
+              },
+              {
+                "name": "TotalQuantityBigDiscount"
+              },
+              {
+                "name": "TotalQuantityNormalDiscount"
+              },
+              {
+                "name": "TotalQuatity"
+              }
+            ]
+          },
+          {
+            "name": "Product",
+            "columns": [
+              {
+                "name": "CategoryName"
+              },
+              {
+                "name": "ProductName"
+              }
+            ]
+          },
+          {
+            "name": "ShipInfo",
+            "columns": [
+              {
+                "name": "City"
+              },
+              {
+                "name": "Country"
+              },
+              {
+                "name": "Region"
+              }
+            ]
+          },
+          {
+            "name": "Shipper",
+            "columns": [
+              {
+                "name": "CompanyName"
+              },
+              {
+                "name": "Shipper Name"
+              }
+            ]
+          }
+        ]
       }
     ],
     "annotations": [
